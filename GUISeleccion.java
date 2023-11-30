@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 
 public class GUISeleccion extends JFrame implements ActionListener {
     private JTextField textField1;
+    private JLabel labelPais;
     private JButton mostrarJugadoresButton;
 
     public GUISeleccion() {
@@ -14,13 +15,16 @@ public class GUISeleccion extends JFrame implements ActionListener {
     }
     private void initGUISeleccion() {
         JPanel panel = new JPanel();
-        JTextField textField = new JTextField(10);
+        JLabel labelimg = new JLabel(new ImageIcon("/home/sebastianll/Documents/intellij_IDEA/test/Datos/raw/aus.png"));
+
+        JLabel label = new JLabel();
+        label.setText("País:");
         JButton mostrarJugadoresButton = new JButton();
         mostrarJugadoresButton.setText("Ver Jugadores");
 
-
-        panel.add(textField);
         panel.add(mostrarJugadoresButton);
+        panel.add(label);
+        panel.add(labelimg);
 
         this.add(panel);
         mostrarJugadoresButton.addActionListener(new ActionListener() {
